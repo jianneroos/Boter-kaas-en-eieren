@@ -18,10 +18,12 @@ class MyAgent(MLAgent):
 
 def anderpersoon():
   start()
+  again()
 
 def domtegen():
   my_random_agent = MyRandomAgent()
   start(player_o=my_random_agent)
+  again()
 
 def trainen():    
   my_agent = MyAgent()
@@ -36,6 +38,7 @@ def slimtegen():
   my_agent.learning = False
  
   start(player_x=my_agent)
+  again()
 
 def plot():
   random.seed(1)
@@ -49,12 +52,32 @@ def plot():
       iterations=50,
       trainings=100,
       validations=1000)
+  again()
+
+def again():
+  print()
+  again = input("Wil je opnieuw spelen?")
+  if again == "13" or again == "enter":
+        print("")
+
+  else:
+      print()
+      print("Tot ziens!")
+      quit()
+
 
 print("1: Tegen een ander persoon spelen")
 print("2: Tegen een domme tegenstander spelen")
 print("3: De tegenstander trainen")
 print("4: Tegen een slimme tegenstander spelen")
 print("5: Je programma kan de validatie grafiek plotten")
+
+#print("1: Tegen een ander persoon spelen")
+#print("2: Tegen een domme tegenstander spelen")
+#print("3: De tegenstander trainen")
+#print("4: Tegen een slimme tegenstander spelen")
+#print("5: Je programma kan de validatie grafiek plotten")
+
 
 i = input()
 
@@ -72,3 +95,6 @@ if i == "4":
 
 if i == "5":
   plot()
+
+if i == "Enter":
+  again()
