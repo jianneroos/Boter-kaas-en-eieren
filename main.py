@@ -28,7 +28,8 @@ def menu():
             3: De tegenstander trainen
             4: Tegen een slimme tegenstander spelen
             5: De validatie grafiek plotten
-          """)
+            
+            """)
 
   if i == "1":
     anderpersoon()
@@ -47,7 +48,7 @@ def menu():
 
 def again():
   print()
-  again = input("Wil je opnieuw spelen? Toets Ja of Nee")
+  again = input("Wil je opnieuw spelen? Toets Ja of Nee    ")
   if again == "Ja" or again == "ja" or again == "JA":
         print("")
         menu()
@@ -75,6 +76,7 @@ def trainen():
  
   save(my_agent, 'MyAgent_3000')
   print("De speler is getraind! Als je tegen de getrainde speler wilt spelen kies dan voor opnieuw spelen en kies voor spel 4!")
+  print()
   again()
 
 def slimtegen():
